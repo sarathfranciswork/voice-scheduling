@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.env
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+node_modules/
+capture/raw_flows/
+*.har
+.mitmproxy/
+data/
+frontend/dist/
+.cvs_auth_browser/

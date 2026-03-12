@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+/* CVS Brand Theme Tokens */
+:root,
+[data-theme="red"] {
+  --color-primary: #CC0000;
+  --color-primary-light: #E8384F;
+  --color-primary-dark: #990000;
+  --color-primary-50: #FFF5F5;
+  --color-primary-100: #FED7D7;
+  --color-primary-200: #FEB2B2;
+  --color-primary-hover: #B30000;
+  --color-primary-ring: rgba(204, 0, 0, 0.3);
+}
+
+[data-theme="blue"] {
+  --color-primary: #17447C;
+  --color-primary-light: #44B4E7;
+  --color-primary-dark: #0D2E54;
+  --color-primary-50: #EFF6FF;
+  --color-primary-100: #DBEAFE;
+  --color-primary-200: #BFDBFE;
+  --color-primary-hover: #0F3566;
+  --color-primary-ring: rgba(23, 68, 124, 0.3);
+}
+
+@theme {
+  --color-cvs-primary: var(--color-primary);
+  --color-cvs-primary-light: var(--color-primary-light);
+  --color-cvs-primary-dark: var(--color-primary-dark);
+  --color-cvs-primary-50: var(--color-primary-50);
+  --color-cvs-primary-100: var(--color-primary-100);
+  --color-cvs-primary-200: var(--color-primary-200);
+  --color-cvs-primary-hover: var(--color-primary-hover);
+  --color-cvs-primary-ring: var(--color-primary-ring);
+  --color-cvs-heart: #CC0000;
+  --color-cvs-surface: #F9FAFB;
+  --color-cvs-surface-hover: #F3F4F6;
+  --color-cvs-border: #E5E7EB;
+  --color-cvs-text: #111827;
+  --color-cvs-text-secondary: #6B7280;
+  --color-cvs-text-tertiary: #9CA3AF;
+}
+
+/* Scrollbar styling */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #D1D5DB;
+  border-radius: 3px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color: #9CA3AF;
+}
+
+/* Typing indicator animation */
+@keyframes bounce-dot {
+  0%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-6px); }
+}
+
+.typing-dot {
+  animation: bounce-dot 1.4s ease-in-out infinite;
+}
+.typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Tool indicator pulse */
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+.tool-pulse::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: var(--color-primary);
+  opacity: 0.3;
+  animation: pulse-ring 1.5s ease-out infinite;
+}
+
+/* Markdown content styles */
+.markdown-content h1, .markdown-content h2, .markdown-content h3 {
+  font-weight: 600;
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+.markdown-content ul, .markdown-content ol {
+  margin-left: 1.25rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+.markdown-content ul { list-style-type: disc; }
+.markdown-content ol { list-style-type: decimal; }
+.markdown-content li { margin-bottom: 0.125rem; }
+.markdown-content code {
+  background-color: #F3F4F6;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+}
+.markdown-content pre {
+  background-color: #1F2937;
+  color: #F9FAFB;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 0.5rem 0;
+}
+.markdown-content pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
+.markdown-content p {
+  margin-bottom: 0.375rem;
+}
+.markdown-content a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+.markdown-content strong { font-weight: 600; }
+.markdown-content em { font-style: italic; }

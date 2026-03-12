@@ -1,0 +1,19 @@
+# Phase 1: API Capture
+mitmproxy>=10.0
+
+# Phase 2: CVS API Wrappers + MCP Server
+httpx>=0.27
+pydantic>=2.0
+fastmcp>=2.0
+uvicorn>=0.30
+
+# Phase 3: Chat Assistant
+fastapi>=0.115
+uvicorn>=0.30
+websockets>=12.0
+openai>=1.50
+aiosqlite>=0.20
+python-dotenv>=1.0
+
+# CVS Session Bootstrap
+playwright>=1.40
