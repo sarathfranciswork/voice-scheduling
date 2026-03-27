@@ -3,11 +3,6 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/voice-scheduling/',
-  build: {
-    outDir: '../docs',
-    emptyOutDir: false,
-  },
   plugins: [react(), tailwindcss()],
   server: {
     port: 5173,
